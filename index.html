@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 />
-        <title>Your Guesthouse</title>
-        <link rel="stylesheet" href="/css/style.css" />
-        <script src="/js/booking.js" defer></script>
-    </head>
-    <body>
-    </body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Your Guesthouse</title>
+	<link rel="stylesheet" href="/css/style.css" />
+	<script src="/js/booking.js" defer></script>
+</head>
+
+<body>
+	<header class="header">
+		<ul class="header__content">
+			<li class="header__item">
+				<a href="index.html" class="header__logo">
+					<img src="/images/logo/hotel-logo.svg" alt="logo" class="logo__image">
+				</a>
+			</li>
+			<li class="header__item">
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="header__nav-item">
+							<a href="#home" class="header__nav-link">HOME</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#about-us" class="header__nav-link">ABOUT US</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#rooms" class="header__nav-link">ROOMS</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#gallery" class="header__nav-link">GALLERY</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#contact-us" class="header__nav-link">CONTACT US</a>
+						</li>
+					</ul>
+				</nav>
+			</li>
+			<li class="header__item">
+				<a href="#book-now" class="header__cta">
+					<button class="header__button">BOOK NOW</button>
+				</a>
+			</li>
+		</ul>
+	</header>
+	<main class="container">
+		<section class="hero" id="home">
+			<div class="hero__logo">
+				<img src="images/logo/hotel-logo.svg" alt="logo" class="hero__logo-image">
+			</div>
+			<h1 class="hero__title">Your Hotels Name</h1>
+			<span class="hero__description">Book directly – best price</span>
+		</section>
+		<section class="about-us" id="about-us">
+			<h2 class="about-us__title">A cozy stay where comfort meets the sea</h2>
+			<p class="about-us__text">
+				Nestled in a quiet corner of the city, just moments away from the beach, our guesthouse is a welcoming retreat
+				for travelers seeking comfort, simplicity, and warm hospitality. Surrounded by palm-lined streets and the
+				relaxed rhythm of coastal life, we offer a peaceful escape while staying close to everything Nha Trang has to
+				offer.
+			</p>
+			<p class="about-us__text">
+				Our rooms are designed for rest and relaxation, filled with natural light and thoughtful details that make you
+				feel at home. Wake up to gentle morning sunshine, enjoy fresh sea air, and unwind after a day of exploring the
+				city, the islands, and the vibrant local culture.
+			</p>
+			<p class="about-us__text">
+				Whether you are visiting for a short getaway, a family holiday, or a longer stay by the sea, we focus on what
+				matters most — cleanliness, comfort, and personal service. Our team is always happy to assist you with local
+				tips, transportation, and recommendations to make your stay easy and enjoyable.
+			</p>
+			<p class="about-us__text">
+				We invite you to experience a simple, honest, and relaxing stay — where every guest is welcomed not just as a
+				visitor, but as part of our home.
+			</p>
+		</section>
+		<section class="rooms" id="rooms">
+			<h2 class="rooms__title">Our Rooms</h2>
+			<p class="rooms__text">Our rooms are designed to provide a comfortable and relaxing stay for every guest.
+				Whether you are traveling solo, as a couple, or with family, you will find a space that suits your needs. All
+				rooms are clean, well-maintained, and thoughtfully equipped to make your stay easy and enjoyable.</p>
+			<div class="rooms__cards">
+				<div class="rooms__item">
+					<img src="/images/rooms/room-1.jpg" alt="room" class="rooms__image">
+					<h3 class="rooms__name">Standart Room</h3>
+					<p class="rooms__description">A cozy and practical choice for travelers who value comfort and simplicity.
+						The room features a comfortable bed, air conditioning, free Wi-Fi, and a private bathroom. Perfect for short
+						stays and city exploration.</p>
+				</div>
+				<div class="rooms__item">
+					<img src="/images/rooms/room-2.jpg" alt="room" class="rooms__image">
+					<h3 class="rooms__name">Deluxe Room</h3>
+					<p class="rooms__description">Spacious and bright, the Deluxe Room offers extra comfort for a more relaxing
+						experience.
+						Enjoy additional space, modern amenities, and a calm atmosphere — ideal for couples or guests planning a
+						longer stay.</p>
+				</div>
+				<div class="rooms__item">
+					<img src="/images/rooms/room-3.jpg" alt="room" class="rooms__image">
+					<h3 class="rooms__name">Family Room</h3>
+					<p class="rooms__description">Designed with families and small groups in mind, this room provides plenty of
+						space and convenience.
+						With multiple beds and a comfortable layout, it is a great option for those traveling together and looking
+						for a home-like stay.</p>
+				</div>
+			</div>
+		</section>
+		<section class="gallery" id="gallery">
+			<div class="gallery__grid">
+				<img src="/images/gallery/gallery-picture-1.jpg" alt="" class="gallery__item">
+				<img src="/images/gallery/gallery-picture-2.jpg" alt="" class="gallery__item">
+				<img src="/images/gallery/gallery-picture-3.jpg" alt="" class="gallery__item">
+				<img src="/images/gallery/gallery-picture-4.jpg" alt="" class="gallery__item">
+				<img src="/images/gallery/gallery-picture-5.jpg" alt="" class="gallery__item">
+				<img src="/images/gallery/gallery-picture-6.jpg" alt="" class="gallery__item">
+				<img src="/images/gallery/gallery-picture-7.jpg" alt="" class="gallery__item">
+				<img src="/images/gallery/gallery-picture-8.jpg" alt="" class="gallery__item">
+			</div>
+		</section>
+		<section class="book-now" id="book-now"></section>
+		<section class="contact-us" id="contact-us"></section>
+	</main>
+	<footer class="footer"></footer>
+</body>
+
 </html>
