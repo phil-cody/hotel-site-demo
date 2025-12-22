@@ -374,6 +374,7 @@ html {
 .footer__bottom {
 	grid-column: 1 / 3;
 	text-align: center;
+	font-size: 0.8rem;
 }
 .footer__wa-btn {
 	background-color: #2cb742;
