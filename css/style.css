@@ -19,7 +19,7 @@
 
 /* Reset */
 
-* {
+*, *::after, *::before {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -62,7 +62,7 @@ html {
 	font-size: 1.25rem;
 	font-weight: 600;
 }
-.header__button {
+.btn {
 	width: 150px;
 	height: 50px;
 	background-color: #ab2328;
@@ -71,6 +71,8 @@ html {
 	cursor: pointer;
 	color: #fff;
 	font-size: 1.25rem;
+	position: relative;
+	z-index: 3;
 }
 
 
@@ -81,8 +83,9 @@ html {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 2rem;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	background-image: url('../images/hero-image.jpg');
 	background-size: cover;
 	background-position: center;
@@ -132,6 +135,38 @@ html {
 	position: relative;
 	z-index: 1;
 }
+.hero__cta {
+	display: flex;
+	gap: 2rem;
+}
+.hero__cta {
+	margin-top: 2rem;
+	display: flex;
+	gap: 4rem;
+}
+.hero__book-btn {
+	width: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+.hero__book-pic {
+	width: 40px;
+	height: 40px;
+}
+.hero__wa-btn {
+	background-color: #2cb742;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+.hero__wa-logo {
+	width: 40px;
+	height: 40px;
+}
 
 
 /* Styles for About Us */
@@ -178,10 +213,10 @@ html {
 }
 .rooms__cards {
 	display: flex;
-	gap: 2rem;
+	justify-content: space-between;
 }
 .rooms__item {
-	width: calc((100% - 8rem) / 3);
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -211,4 +246,144 @@ html {
 }
 .gallery__item {
 	width: 100%;
+}
+
+
+/* Styles for Booking form */
+
+.booking {
+	padding: 2rem;
+}
+.booking__container {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	width: 30vw;
+}
+.booking__title {
+	font-size: 1.5rem;
+	color: #3f3f3f;
+}
+.booking__subtitle {
+	font-size: 1rem;
+	color: #7f7f7f;
+}
+.booking__form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	width: 100%;
+}
+.booking__field {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.booking__field label {
+	width: 100%;
+	color: #3f3f3f;
+	text-align: left;
+}
+.booking__field input, .booking__field textarea {
+	padding: 0.5rem;
+}
+.booking__row {
+	display: flex;
+	justify-content: space-evenly;
+}
+.booking__row .booking__field {
+	width: 30%;
+}
+.guests {
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.guests label {
+	width: fit-content;
+}
+.booking__submit {
+	width: 100%;
+}
+
+
+/* Styles for Footer */
+
+.footer {
+	background-color: #3f3f3f;
+	color: #fff;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0;
+}
+.footer a {
+	color: #fff;
+	font-size: 1.5rem;
+}
+.footer__block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
+	padding: 1rem;
+}
+.footer__block.first {
+	text-align: center;
+}
+.footer__block p {
+	font-size: 1.5rem;
+}
+.footer__block.footer__contact {
+	gap: 0;
+	align-self: flex-end;
+}
+.footer__block.footer__contact p, .footer__block.footer__contact a {
+	font-size: 1rem;
+	text-align: right;
+}
+.footer__title {
+	font-size: 2rem;
+	text-align: center;
+}
+.footer__text {
+	font-size: 1.5rem;
+}
+.footer__wa {
+	margin-top: 2rem;
+}
+.footer__block.footer__map {
+	padding: 0;
+}
+.footer__map {
+	grid-column: 2;
+	grid-row: 1 / 3;
+}
+.footer__map iframe {
+	border: none;
+	width: 50vw;
+	height: 100%;
+}
+.footer__map h3 {
+	display: none;
+}
+.footer__bottom {
+	grid-column: 1 / 3;
+	text-align: center;
+}
+.footer__wa-btn {
+	background-color: #2cb742;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+.footer__wa-logo {
+	width: 40px;
+	height: 40px;
 }
