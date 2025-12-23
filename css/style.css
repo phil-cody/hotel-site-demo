@@ -32,10 +32,17 @@ a {
 li {
 	list-style: none;
 }
+
+
+/* Base style */
+
 html {
 	font-family: 'Sarabun', sans-serif;
+	scroll-behavior: smooth;
 }
-
+section, footer, header {
+	scroll-margin-top: 90px;
+}
 
 /* Styles for Header */
 
@@ -53,18 +60,34 @@ html {
 	justify-content: space-between;
 	align-items: center;
 }
+.header__nav {
+	height: 100%;
+}
 .header__nav-list {
 	display: flex;
 	gap: 32px;
+	height: 100%;
 }
 .header__nav-link {
+	display: flex;
+	align-items: center;
 	color: #313131;
 	font-size: 1.25rem;
 	font-weight: 600;
+	height: 100%;
+}
+.header__item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	height: 100%;
+}
+.header__cta {
+	opacity: 0.8;
 }
 .btn {
 	width: 150px;
-	height: 50px;
+	height: 60px;
 	background-color: #ab2328;
 	border: none;
 	border-radius: 10px;
@@ -73,6 +96,18 @@ html {
 	font-size: 1.25rem;
 	position: relative;
 	z-index: 3;
+	text-align: center;
+}
+.header__wa-btn {
+	background-color: #2cb742;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+.header__wa-logo {
+	width: 40px;
+	height: 40px;
 }
 
 
@@ -124,13 +159,13 @@ html {
 	z-index: 1;
 }
 .hero__title {
-	font-size: 5rem;
+	font-size: clamp(2.5rem, 5vw, 4rem);
 	text-align: center;
 	position: relative;
 	z-index: 1;
 }
 .hero__description {
-	font-size: 2rem;
+	font-size: clamp(1.2rem, 2.5vw, 1.6rem);
 	text-align: center;
 	position: relative;
 	z-index: 1;

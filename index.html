@@ -12,13 +12,13 @@
 
 <body>
 	<header class="header">
-		<ul class="header__content">
-			<li class="header__item">
+		<div class="header__content">
+			<div class="header__item">
 				<a href="index.html" class="header__logo">
 					<img src="./images/logo/hotel-logo.svg" alt="logo" class="logo__image">
 				</a>
-			</li>
-			<li class="header__item">
+			</div>
+			<div class="header__item">
 				<nav class="header__nav">
 					<ul class="header__nav-list">
 						<li class="header__nav-item">
@@ -34,37 +34,32 @@
 							<a href="#gallery" class="header__nav-link">GALLERY</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="#contact-us" class="header__nav-link">CONTACT US</a>
+							<a href="#contact" class="header__nav-link">CONTACT</a>
 						</li>
 					</ul>
 				</nav>
-			</li>
-			<li class="header__item">
-				<a href="#book-now" class="header__cta">
-					<button class="header__button btn">BOOK NOW</button>
+			</div>
+			<div class="header__item">
+				<a href="https://wa.me/+79953260711" class="header__wa-btn btn">
+					<img src="./images/wa-logo.png" alt="" class="header__wa-logo">
 				</a>
-			</li>
-		</ul>
+				<a href="#contact" class="header__cta btn">
+					Check availability
+				</a>
+			</div>
+		</div>
 	</header>
 	<main class="container">
 		<section class="hero" id="home">
 			<div class="hero__logo">
 				<img src="./images/logo/hotel-logo.svg" alt="logo" class="hero__logo-image">
 			</div>
-			<h1 class="hero__title">Your Hotels Name</h1>
-			<span class="hero__description">Modern rooms, free Wi-Fi and direct booking with no commission.</span>
+			<h1 class="hero__title">Direct hotel bookings on your own website</h1>
+			<span class="hero__description">Simple website that lets guests contact you without booking platforms</span>
 			<div class="hero__cta">
-				<a href="#book-now" class="hero__book-now">
-					<button class="hero__book-btn btn">
-						<img src="./images/book-now-pic.svg" alt="" class="hero__book-pic">
-						Book Now
-					</button>
-				</a>
-				<a href="https://wa.me/+79953260711" class="hero__wa">
-					<button class="hero__wa-btn btn">
-						<img src="./images/wa-logo.png" alt="" class="hero__wa-logo">
-						WhatsApp Us
-					</button>
+				<a href="#contact" class="hero__book-btn btn">
+					<img src="./images/book-now-pic.svg" alt="" class="hero__book-pic">
+					Check availability
 				</a>
 			</div>
 		</section>
@@ -134,10 +129,10 @@
 				<img src="./images/gallery/gallery-picture-8.jpg" alt="" class="gallery__item">
 			</div>
 		</section>
-		<section class="booking" id="book-now">
+		<section class="booking" id="contact">
 			<div class="booking__container">
-				<h2 class="booking__title">Book a Room</h2>
-				<p class="booking__subtitle">Send a booking request and we will contact you shortly.</p>
+				<h2 class="booking__title">Check room availability</h2>
+				<p class="booking__subtitle">We usually reply within a few hours via WhatsApp or email</p>
 				<form action="https://formsubmit.co/antaress07@icloud.com" method="POST" class="booking__form" id="bookingForm">
 					<div class="booking__field">
 						<label for="name">Your Name</label>
@@ -171,6 +166,7 @@
 					</div>
 					<button class="booking__submit btn" type="submit">Send booking request</button>
 				</form>
+				<p class="booking__subtitle">We usually reply within a few hours via WhatsApp or email</p>
 			</div>
 		</section>
 	</main>
@@ -178,11 +174,9 @@
 		<div class="footer__block first">
 			<h3 class="footer__title">Your Hotel Name</h3>
 			<p class="footer__text">Cozy hotel near the beach in Nha Trang.<br>Direct booking with no commission.</p>
-			<a href="https://wa.me/+79953260711" class="footer__wa">
-				<button class="footer__wa-btn btn">
-					<img src="./images/wa-logo.png" alt="" class="footer__wa-logo">
-					WhatsApp Us
-				</button>
+			<a href="https://wa.me/+79953260711" class="footer__wa-btn btn">
+				<img src="./images/wa-logo.png" alt="" class="footer__wa-logo">
+				WhatsApp Us
 			</a>
 		</div>
 		<div class="footer__block footer__contact">
@@ -213,8 +207,8 @@
 		</div>
 
 		<div class="footer__bottom">
-			<p>© 2025 Your Hotel Name. All rights reserved.</p>
-			<p>Direct booking · Best price guaranteed</p>
+			<p>This is a demo hotel website.</p>
+			<p>I adapt it individually for each hotel.</p>
 		</div>
 	</footer>
 </body>
