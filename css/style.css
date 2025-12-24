@@ -1,4 +1,4 @@
-/* Fonts – Sarabun Latin */
+/* ===== FONTS – Sarabun Latin ===== */
 
 @font-face {
 	font-display: swap;
@@ -16,10 +16,11 @@
 	src: url('../fonts/sarabun-v17-latin-600.woff2') format('woff2');
 }
 
+/* ===== RESET ===== */
 
-/* Reset */
-
-*, *::after, *::before {
+*,
+*::after,
+*::before {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -33,18 +34,31 @@ li {
 	list-style: none;
 }
 
-
-/* Base style */
+/* ===== BASE ===== */
 
 html {
 	font-family: 'Sarabun', sans-serif;
 	scroll-behavior: smooth;
+	min-width: 375px;
 }
-section, footer, header {
+
+section,
+footer,
+header {
 	scroll-margin-top: 90px;
 }
 
-/* Styles for Header */
+.overlay.nav__open {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* ===== HEADER ===== */
 
 .header {
 	width: 100%;
@@ -53,6 +67,7 @@ section, footer, header {
 	position: fixed;
 	z-index: 5;
 }
+
 .header__content {
 	height: 100%;
 	padding: 0 24px;
@@ -60,14 +75,17 @@ section, footer, header {
 	justify-content: space-between;
 	align-items: center;
 }
+
 .header__nav {
 	height: 100%;
 }
+
 .header__nav-list {
 	display: flex;
 	gap: 32px;
 	height: 100%;
 }
+
 .header__nav-link {
 	display: flex;
 	align-items: center;
@@ -76,15 +94,18 @@ section, footer, header {
 	font-weight: 600;
 	height: 100%;
 }
+
 .header__item {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
 	height: 100%;
 }
+
 .header__cta {
 	opacity: 0.8;
 }
+
 .btn {
 	width: 150px;
 	height: 60px;
@@ -95,9 +116,10 @@ section, footer, header {
 	color: #fff;
 	font-size: 1.25rem;
 	position: relative;
-	z-index: 3;
+	z-index: 4;
 	text-align: center;
 }
+
 .header__wa-btn {
 	background-color: #2cb742;
 	display: flex;
@@ -105,13 +127,37 @@ section, footer, header {
 	justify-content: center;
 	gap: 1rem;
 }
+
 .header__wa-logo {
 	width: 40px;
 	height: 40px;
 }
 
+.burger {
+	display: none;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 60px;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	width: 60px;
+	background-color: transparent;
+}
 
-/* Styles for Hero */
+.burger__line {
+	width: 100%;
+	height: 10px;
+	background-color: #5f5f5f;
+	opacity: 0.8;
+	border-radius: 3px;
+}
+
+.nav__open .burger__line {
+	background-color: #ab2328;
+}
+
+/* ===== HERO ===== */
 
 .hero {
 	display: flex;
@@ -121,13 +167,15 @@ section, footer, header {
 	gap: 2rem;
 	width: 100%;
 	min-height: 100vh;
-	background-image: url('../images/hero-image.jpg');
+	background-image: url('../images/hero-image.webp');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	color: #fff;
 	position: relative;
+	padding-top: 100px;
 }
+
 .hero::before {
 	content: '';
 	width: 100%;
@@ -138,10 +186,12 @@ section, footer, header {
 	z-index: 0;
 	background-color: rgba(0, 0, 0, 0.15);
 }
+
 .hero__logo {
 	min-width: 250px;
 	position: relative;
 }
+
 .hero__logo::before {
 	content: '';
 	width: 250px;
@@ -153,32 +203,38 @@ section, footer, header {
 	z-index: 0;
 	border-radius: 100%;
 }
+
 .hero__logo-image {
 	width: 100%;
 	position: relative;
 	z-index: 1;
 }
+
 .hero__title {
 	font-size: clamp(2.5rem, 5vw, 4rem);
 	text-align: center;
 	position: relative;
 	z-index: 1;
 }
+
 .hero__description {
 	font-size: clamp(1.2rem, 2.5vw, 1.6rem);
 	text-align: center;
 	position: relative;
 	z-index: 1;
 }
+
 .hero__cta {
 	display: flex;
 	gap: 2rem;
 }
+
 .hero__cta {
 	margin-top: 2rem;
 	display: flex;
 	gap: 4rem;
 }
+
 .hero__book-btn {
 	width: 250px;
 	display: flex;
@@ -186,10 +242,12 @@ section, footer, header {
 	justify-content: center;
 	gap: 1rem;
 }
+
 .hero__book-pic {
 	width: 40px;
 	height: 40px;
 }
+
 .hero__wa-btn {
 	background-color: #2cb742;
 	width: 250px;
@@ -198,13 +256,13 @@ section, footer, header {
 	justify-content: center;
 	gap: 1rem;
 }
+
 .hero__wa-logo {
 	width: 40px;
 	height: 40px;
 }
 
-
-/* Styles for About Us */
+/* ===== ABOUT US ===== */
 
 .about-us {
 	width: 100%;
@@ -216,11 +274,13 @@ section, footer, header {
 	gap: 2rem;
 	align-items: center;
 }
+
 .about-us__title {
 	font-size: 2rem;
 	max-width: 450px;
 	color: #1f1f1f;
 }
+
 .about-us__text {
 	text-align: justify;
 	width: 50%;
@@ -228,8 +288,7 @@ section, footer, header {
 	color: #5f5f5f;
 }
 
-
-/* Styles for Rooms */
+/* ===== ROOMS ===== */
 
 .rooms {
 	width: 100%;
@@ -240,30 +299,37 @@ section, footer, header {
 	flex-direction: column;
 	gap: 2rem;
 }
+
 .rooms__title {
 	color: #1f1f1f;
 }
+
 .rooms__text {
 	color: #5f5f5f;
 }
+
 .rooms__cards {
 	display: flex;
 	justify-content: space-between;
 }
+
 .rooms__item {
 	width: 30%;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 }
+
 .rooms__image {
 	width: 100%;
 	object-fit: cover;
 }
+
 .rooms__name {
 	font-size: 1.5rem;
 	color: #1f1f1f;
 }
+
 .rooms__description {
 	padding: 0 1rem;
 	text-align: justify;
@@ -271,24 +337,24 @@ section, footer, header {
 	color: #5f5f5f;
 }
 
-
-/* Styles for Gallery */
+/* ===== GALLERY ===== */
 
 .gallery__grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 0;
 }
+
 .gallery__item {
 	width: 100%;
 }
 
-
-/* Styles for Booking form */
+/* ===== BOOKING FORM ===== */
 
 .booking {
 	padding: 2rem;
 }
+
 .booking__container {
 	margin: 0 auto;
 	display: flex;
@@ -298,54 +364,65 @@ section, footer, header {
 	gap: 1rem;
 	width: 30vw;
 }
+
 .booking__title {
 	font-size: 1.5rem;
 	color: #1f1f1f;
 }
+
 .booking__subtitle {
 	font-size: 1rem;
 	color: #5f5f5f;
 }
+
 .booking__form {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
 	width: 100%;
 }
+
 .booking__field {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 }
+
 .booking__field label {
 	width: 100%;
 	color: #1f1f1f;
 	text-align: left;
 }
-.booking__field input, .booking__field textarea {
+
+.booking__field input,
+.booking__field textarea {
 	padding: 0.5rem;
 }
+
 .booking__row {
 	display: flex;
 	justify-content: space-evenly;
 }
+
 .booking__row .booking__field {
 	width: 30%;
 }
+
 .guests {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
+
 .guests label {
 	width: fit-content;
 }
+
 .booking__submit {
 	width: 100%;
 }
 
-
-/* Styles for Footer */
+/* ===== FOOTER ===== */
 
 .footer {
 	background-color: #1f1f1f;
@@ -354,10 +431,12 @@ section, footer, header {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 0;
 }
+
 .footer a {
 	color: #fff;
 	font-size: 1.5rem;
 }
+
 .footer__block {
 	display: flex;
 	flex-direction: column;
@@ -367,50 +446,53 @@ section, footer, header {
 	gap: 1rem;
 	padding: 1rem;
 }
+
 .footer__block.first {
 	text-align: center;
 }
-.footer__block p {
-	font-size: 1.5rem;
-}
-.footer__block.footer__contact {
-	gap: 0;
-	align-self: flex-end;
-}
-.footer__block.footer__contact p, .footer__block.footer__contact a {
-	font-size: 1rem;
-	text-align: right;
-}
+
 .footer__title {
 	font-size: 2rem;
 	text-align: center;
 }
+
 .footer__text {
-	font-size: 1.5rem;
+	font-size: clamp(1.2rem, 2.5vw, 1.6rem);
 }
+
+.footer__text a {
+	font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+}
+
 .footer__wa {
 	margin-top: 2rem;
 }
+
 .footer__block.footer__map {
 	padding: 0;
 }
+
 .footer__map {
 	grid-column: 2;
 	grid-row: 1 / 3;
 }
+
 .footer__map iframe {
 	border: none;
 	width: 50vw;
 	height: 100%;
 }
+
 .footer__map h3 {
 	display: none;
 }
+
 .footer__bottom {
 	grid-column: 1 / 3;
 	text-align: center;
 	font-size: 0.8rem;
 }
+
 .footer__wa-btn {
 	background-color: #2cb742;
 	width: 250px;
@@ -419,7 +501,354 @@ section, footer, header {
 	justify-content: center;
 	gap: 1rem;
 }
+
 .footer__wa-logo {
 	width: 40px;
 	height: 40px;
+}
+
+/* ===== MEDIA FOR BURGER ===== */
+
+@media (max-width: 1024px) {
+	.header__nav {
+		position: fixed;
+		top: 90px;
+		right: 0;
+		width: 30%;
+		height: calc(100vh - 90px);
+		background-color: rgba(255, 255, 255, 0.95);
+		transform: translateX(100%);
+		transition: transform 0.3s ease;
+		z-index: 10;
+	}
+
+	.header__nav.nav__open {
+		transform: translateX(0);
+	}
+
+	.header__nav-list {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.header__nav-item {
+		width: 100%;
+	}
+
+	.header__nav-link {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.burger {
+		display: flex;
+	}
+}
+
+/* ===== MEDIA FOR TABLET ===== */
+
+@media (max-width: 768px) {
+
+	/* ===== BASE ===== */
+
+	section,
+	footer,
+	header {
+		scroll-margin-top: 72px;
+	}
+
+	/* ===== HEADER ===== */
+
+	.header {
+		height: 72px;
+	}
+
+	.header__nav {
+		top: 72px;
+		height: calc(100vh - 72px);
+	}
+
+	.header__button {
+		height: 40px;
+		font-size: 0.9rem;
+		padding: 0 12px;
+	}
+
+	.btn {
+		height: 40px;
+		width: 120px;
+		font-size: 1rem;
+		line-height: 1rem;
+		padding: 0.2rem;
+	}
+
+	.header__wa-btn {
+		width: 40px;
+		height: 40px;
+	}
+
+	.header__wa-logo {
+		width: 24px;
+		height: 24px;
+	}
+
+	.burger {
+		width: 50px;
+		height: 50px;
+	}
+
+	.burger span {
+		height: 8px;
+	}
+
+	/* ===== HERO ===== */
+
+	.hero {
+		padding: 100px 1rem 2rem;
+		text-align: center;
+	}
+
+	.hero__title {
+		font-size: 2.2rem;
+	}
+
+	.hero__description {
+		font-size: 1.1rem;
+	}
+
+	.hero__logo {
+		min-width: 160px;
+	}
+
+	.hero__logo::before {
+		width: 160px;
+		height: 160px;
+	}
+
+	.hero__cta {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.hero__book-btn {
+		height: 60px;
+		width: 150px;
+		font-size: 1.2rem;
+		gap: 0.6rem;
+		line-height: 1.2rem;
+	}
+
+	.hero__btn-text {
+		width: 90px;
+	}
+
+	.hero__book-pic {
+		width: 28px;
+		height: 28px;
+	}
+
+	/* ===== ROOMS ===== */
+
+	.rooms__cards {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.rooms__item {
+		width: 100%;
+	}
+
+	/* ===== BOOKING FORM ===== */
+
+	.booking__container {
+		width: 100%;
+	}
+
+	.booking__row {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.booking__row .booking__field {
+		width: 100%;
+	}
+
+	.booking__submit {
+		width: 100%;
+		height: 48px;
+		font-size: 1rem;
+	}
+
+	/* ===== FOOTER ===== */
+
+	.footer__title {
+		font-size: 1.5rem;
+	}
+
+	.footer__text {
+		font-size: 1rem;
+	}
+
+	.footer__block {
+		justify-content: space-between;
+	}
+
+	.footer__block.footer__contact {
+		height: 100%;
+	}
+
+	.footer__map iframe {
+		width: 100%;
+		height: 300px;
+	}
+
+	.footer__map {
+		grid-column: 1 / 3;
+		grid-row: 2;
+	}
+
+	.footer__wa-logo {
+		width: 24px;
+		height: 24px;
+	}
+
+	.footer__wa-btn {
+		gap: 0;
+		justify-content: space-evenly;
+	}
+
+	.footer a {
+		font-size: 1rem;
+	}
+}
+
+/* ===== MEDIA FOR MOBILE */
+
+@media (max-width: 375px) {
+
+	/* ===== HEADER ===== */
+
+	section,
+	footer,
+	header {
+		scroll-margin-top: 72px;
+	}
+
+	.header__content {
+		padding: 0 12px;
+	}
+
+	/* ===== HERO ===== */
+
+	.hero {
+		gap: 1.2rem;
+	}
+
+	.hero__title {
+		font-size: 1.6rem;
+		line-height: 1.3;
+	}
+
+	.hero__description {
+		font-size: 0.95rem;
+		line-height: 1.4;
+	}
+
+	/* ===== ABOUT ===== */
+
+	.about-us {
+		padding: 1.5rem 1rem;
+	}
+
+	.about-us__title {
+		font-size: 1.4rem;
+	}
+
+	.about-us__text {
+		width: 100%;
+		font-size: 0.95rem;
+	}
+
+	/* ===== ROOMS ===== */
+
+	.rooms {
+		padding: 1.5rem 1rem;
+	}
+
+	.rooms__name {
+		font-size: 1.2rem;
+	}
+
+	.rooms__description {
+		font-size: 0.9rem;
+	}
+
+	/* ===== GALLERY ===== */
+
+	.gallery__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* ===== BOOKING ===== */
+
+	.booking {
+		padding: 1.5rem 1rem;
+	}
+
+	.booking__title {
+		font-size: 1.3rem;
+	}
+
+	.booking__subtitle {
+		font-size: 0.9rem;
+		text-align: center;
+	}
+
+	.booking__field label {
+		font-size: 0.9rem;
+	}
+
+	.booking__field input,
+	.booking__field textarea {
+		font-size: 1rem;
+		padding: 0.6rem;
+	}
+
+	/* ===== FOOTER ===== */
+
+	.footer {
+		grid-template-columns: 1fr;
+	}
+
+	.footer.first {
+		grid-column: 1;
+	}
+
+	.footer__map {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.footer__block.footer__contact {
+		grid-column: 1;
+		grid-row: 3;
+	}
+
+	.footer__block {
+		padding: 1rem;
+	}
+
+	.footer__title {
+		font-size: 1.3rem;
+	}
+
+	.footer__block p,
+	.footer__block a {
+		font-size: 1rem;
+	}
+
+	.footer__map iframe {
+		height: 220px;
+	}
 }

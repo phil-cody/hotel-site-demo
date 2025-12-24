@@ -15,7 +15,7 @@
 		<div class="header__content">
 			<div class="header__item">
 				<a href="index.html" class="header__logo">
-					<img src="./images/logo/hotel-logo.svg" alt="logo" class="logo__image">
+					<img src="./images/logo/hotel-logo.svg" alt="logo" class="logo__image" width="90px" height="90px">
 				</a>
 			</div>
 			<div class="header__item">
@@ -46,7 +46,13 @@
 				<a href="#contact" class="header__cta btn">
 					Check availability
 				</a>
+				<button class="burger" aria-label="Open navigation menu">
+					<span class="burger__line"></span>
+					<span class="burger__line"></span>
+					<span class="burger__line"></span>
+				</button>
 			</div>
+			<div class="overlay"></div>
 		</div>
 	</header>
 	<main class="container">
@@ -59,7 +65,7 @@
 			<div class="hero__cta">
 				<a href="#contact" class="hero__book-btn btn">
 					<img src="./images/book-now-pic.svg" alt="" class="hero__book-pic">
-					Check availability
+					<span class="hero__btn-text">Check availability</span>
 				</a>
 			</div>
 		</section>
@@ -93,14 +99,14 @@
 				rooms are clean, well-maintained, and thoughtfully equipped to make your stay easy and enjoyable.</p>
 			<div class="rooms__cards">
 				<div class="rooms__item">
-					<img src="./images/rooms/room-1.jpg" alt="room" class="rooms__image">
+					<img src="./images/rooms/room-1.webp" alt="room" class="rooms__image">
 					<h3 class="rooms__name">Standart Room</h3>
 					<p class="rooms__description">A cozy and practical choice for travelers who value comfort and simplicity.
 						The room features a comfortable bed, air conditioning, free Wi-Fi, and a private bathroom. Perfect for short
 						stays and city exploration.</p>
 				</div>
 				<div class="rooms__item">
-					<img src="./images/rooms/room-2.jpg" alt="room" class="rooms__image">
+					<img src="./images/rooms/room-2.webp" alt="room" class="rooms__image">
 					<h3 class="rooms__name">Deluxe Room</h3>
 					<p class="rooms__description">Spacious and bright, the Deluxe Room offers extra comfort for a more relaxing
 						experience.
@@ -108,7 +114,7 @@
 						longer stay.</p>
 				</div>
 				<div class="rooms__item">
-					<img src="./images/rooms/room-3.jpg" alt="room" class="rooms__image">
+					<img src="./images/rooms/room-3.webp" alt="room" class="rooms__image">
 					<h3 class="rooms__name">Family Room</h3>
 					<p class="rooms__description">Designed with families and small groups in mind, this room provides plenty of
 						space and convenience.
@@ -119,14 +125,14 @@
 		</section>
 		<section class="gallery" id="gallery">
 			<div class="gallery__grid">
-				<img src="./images/gallery/gallery-picture-1.jpg" alt="" class="gallery__item">
-				<img src="./images/gallery/gallery-picture-2.jpg" alt="" class="gallery__item">
-				<img src="./images/gallery/gallery-picture-3.jpg" alt="" class="gallery__item">
-				<img src="./images/gallery/gallery-picture-4.jpg" alt="" class="gallery__item">
-				<img src="./images/gallery/gallery-picture-5.jpg" alt="" class="gallery__item">
-				<img src="./images/gallery/gallery-picture-6.jpg" alt="" class="gallery__item">
-				<img src="./images/gallery/gallery-picture-7.jpg" alt="" class="gallery__item">
-				<img src="./images/gallery/gallery-picture-8.jpg" alt="" class="gallery__item">
+				<img src="./images/gallery/gallery-picture-1.webp" alt="" class="gallery__item">
+				<img src="./images/gallery/gallery-picture-2.webp" alt="" class="gallery__item">
+				<img src="./images/gallery/gallery-picture-3.webp" alt="" class="gallery__item">
+				<img src="./images/gallery/gallery-picture-4.webp" alt="" class="gallery__item">
+				<img src="./images/gallery/gallery-picture-5.webp" alt="" class="gallery__item">
+				<img src="./images/gallery/gallery-picture-6.webp" alt="" class="gallery__item">
+				<img src="./images/gallery/gallery-picture-7.webp" alt="" class="gallery__item">
+				<img src="./images/gallery/gallery-picture-8.webp" alt="" class="gallery__item">
 			</div>
 		</section>
 		<section class="booking" id="contact">
@@ -176,24 +182,21 @@
 			<p class="footer__text">Cozy hotel near the beach in Nha Trang.<br>Direct booking with no commission.</p>
 			<a href="https://wa.me/+79953260711" class="footer__wa-btn btn">
 				<img src="./images/wa-logo.png" alt="" class="footer__wa-logo">
-				WhatsApp Us
+				WhatsApp
 			</a>
 		</div>
 		<div class="footer__block footer__contact">
 			<h3 class="footer__title">Contact</h3>
-			<p>
+			<p class="footer__text">
 				<strong>Address:</strong>
-				123 Beach Road, Nha Trang, Vietnam
-			</p>
-			<p>
+				123 Beach Road,<br>Nha Trang, Vietnam
+			<br>
 				<strong>Phone:</strong>
 				<a href="tel:+84900000000">+84 900 000 000</a>
-			</p>
-			<p>
+			<br>
 				<strong>Email:</strong>
 				<a href="mailto:info@hotel.com">info@hotel.com</a>
-			</p>
-			<p>
+			<br>
 				<strong>Hours:</strong>
 				24/7
 			</p>
@@ -202,8 +205,7 @@
 			<h3 class="footer__title">Location</h3>
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5907.1877105614485!2d109.19407910819758!3d12.240892455849647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170670440c4a309%3A0x4b6cddf8aa9ba969!2sApril%202nd%20Square!5e0!3m2!1sen!2sus!4v1766395125822!5m2!1sen!2sus"
-				allowfullscreen="" loading="lazy" title="location"
-				referrerpolicy="no-referrer-when-downgrade"></iframe>
+				allowfullscreen="" loading="lazy" title="location" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 
 		<div class="footer__bottom">
