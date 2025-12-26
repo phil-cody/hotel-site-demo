@@ -184,7 +184,7 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 0;
-	background-color: rgba(0, 0, 0, 0.15);
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero__logo {
@@ -420,6 +420,44 @@ header {
 
 .booking__submit {
 	width: 100%;
+}
+
+.is-loading {
+	background-color: #5f5f5f;
+	color: #fff;
+}
+
+.booking__message {
+	width: 100%;
+	text-align: center;
+}
+
+.message__title {
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.message__text {
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
+.booking__error {
+	background-color: #fdecec;
+	color: #8a1f1f;
+	border: 1px solid #f5c2c2;
+	padding: 1.5rem;
+}
+
+.booking__success {
+	background-color: #d8fac5;
+	color: #246601;
+	border: 1px solid #8bff4d;
+	padding: 1.5rem;
+}
+
+.is-hidden {
+	display: none;
 }
 
 /* ===== FOOTER ===== */
