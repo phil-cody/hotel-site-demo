@@ -87,6 +87,7 @@ header {
 }
 
 .header__nav-link {
+	text-align: center;
 	display: flex;
 	align-items: center;
 	color: #313131;
@@ -102,6 +103,36 @@ header {
 	height: 100%;
 }
 
+.header__nav-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__lang {
+	display: flex;
+	justify-content: center;
+}
+
+.header__lang-btn {
+	border: none;
+	font-family: 'Sarabun', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	padding: 0.15rem;
+	background-color: #f5c2c2;
+	color: #8a1f1f;
+	opacity: 30%;
+	cursor: pointer;
+}
+
+.is-active {
+	border: 0.1rem ridge #2cb742;
+	background-color: #d8fac5;
+	color: #246601;
+	opacity: 50%;
+}
+
 .header__cta {
 	opacity: 0.8;
 }
@@ -109,15 +140,19 @@ header {
 .btn {
 	width: 150px;
 	height: 60px;
-	background-color: #ab2328;
+	background-color: #8a1f1f;
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
 	color: #fff;
-	font-size: 1.25rem;
+	font-size: 1.1rem;
 	position: relative;
 	z-index: 4;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
 }
 
 .header__wa-btn {
@@ -237,10 +272,6 @@ header {
 
 .hero__book-btn {
 	width: 250px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1rem;
 }
 
 .hero__book-pic {
@@ -672,9 +703,9 @@ header {
 	.hero__book-btn {
 		height: 60px;
 		width: 150px;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		gap: 0.6rem;
-		line-height: 1.2rem;
+		line-height: 1rem;
 	}
 
 	.hero__btn-text {

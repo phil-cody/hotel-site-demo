@@ -22,28 +22,32 @@
 				<nav class="header__nav">
 					<ul class="header__nav-list">
 						<li class="header__nav-item">
-							<a href="#home" class="header__nav-link">HOME</a>
+							<a href="#home" class="header__nav-link" data-i18n="header.home">HOME</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="#about-us" class="header__nav-link">ABOUT US</a>
+							<a href="#about-us" class="header__nav-link" data-i18n="header.about">ABOUT US</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="#rooms" class="header__nav-link">ROOMS</a>
+							<a href="#rooms" class="header__nav-link" data-i18n="header.rooms">ROOMS</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="#gallery" class="header__nav-link">GALLERY</a>
+							<a href="#gallery" class="header__nav-link" data-i18n="header.gallery">GALLERY</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="#contact" class="header__nav-link">CONTACT</a>
+							<a href="#contact" class="header__nav-link" data-i18n="header.contact">CONTACT</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 			<div class="header__item">
+				<div class="header__lang">
+					<button class="header__lang-btn is-active" data-lang="en">EN</button>
+					<button class="header__lang-btn" data-lang="vn">VN</button>
+				</div>
 				<a href="https://wa.me/+79953260711" class="header__wa-btn btn">
 					<img src="./images/wa-logo.png" alt="whatsupp contact button" class="header__wa-logo">
 				</a>
-				<a href="#contact" class="header__cta btn">
+				<a href="#contact" class="header__cta btn" data-i18n="header.cta">
 					Check availability
 				</a>
 				<button class="burger" aria-label="Open navigation menu">
@@ -60,63 +64,68 @@
 			<div class="hero__logo">
 				<img src="./images/logo/hotel-logo.svg" alt="logo" class="hero__logo-image">
 			</div>
-			<h1 class="hero__title">Direct hotel bookings on your own website</h1>
-			<span class="hero__description">Simple website that lets guests contact you without booking platforms</span>
+			<h1 class="hero__title" data-i18n="hero.title">Direct hotel bookings on your own website</h1>
+			<span class="hero__description" data-i18n="hero.description">Simple website that lets guests contact you without
+				booking platforms</span>
 			<div class="hero__cta">
 				<a href="#contact" class="hero__book-btn btn">
 					<img src="./images/book-now-pic.svg" alt="" class="hero__book-pic">
-					<span class="hero__btn-text">Check availability</span>
+					<span class="hero__btn-text" data-i18n="hero.cta">Check availability</span>
 				</a>
 			</div>
 		</section>
 		<section class="about-us" id="about-us">
-			<h2 class="about-us__title">A cozy stay where comfort meets the sea</h2>
-			<p class="about-us__text">
+			<h2 class="about-us__title" data-i18n="about.title">A cozy stay where comfort meets the sea</h2>
+			<p class="about-us__text" data-i18n="about.text__1">
 				Nestled in a quiet corner of the city, just moments away from the beach, our guesthouse is a welcoming retreat
 				for travelers seeking comfort, simplicity, and warm hospitality. Surrounded by palm-lined streets and the
 				relaxed rhythm of coastal life, we offer a peaceful escape while staying close to everything Nha Trang has to
 				offer.
 			</p>
-			<p class="about-us__text">
+			<p class="about-us__text" data-i18n="about.text__2">
 				Our rooms are designed for rest and relaxation, filled with natural light and thoughtful details that make you
 				feel at home. Wake up to gentle morning sunshine, enjoy fresh sea air, and unwind after a day of exploring the
 				city, the islands, and the vibrant local culture.
 			</p>
-			<p class="about-us__text">
+			<p class="about-us__text" data-i18n="about.text__3">
 				Whether you are visiting for a short getaway, a family holiday, or a longer stay by the sea, we focus on what
 				matters most — cleanliness, comfort, and personal service. Our team is always happy to assist you with local
 				tips, transportation, and recommendations to make your stay easy and enjoyable.
 			</p>
-			<p class="about-us__text">
+			<p class="about-us__text" data-i18n="about.text__4">
 				We invite you to experience a simple, honest, and relaxing stay — where every guest is welcomed not just as a
 				visitor, but as part of our home.
 			</p>
 		</section>
 		<section class="rooms" id="rooms">
-			<h2 class="rooms__title">Our Rooms</h2>
-			<p class="rooms__text">Our rooms are designed to provide a comfortable and relaxing stay for every guest.
+			<h2 class="rooms__title" data-i18n="rooms.title">Our Rooms</h2>
+			<p class="rooms__text" data-i18n="rooms.text">Our rooms are designed to provide a comfortable and relaxing stay
+				for every guest.
 				Whether you are traveling solo, as a couple, or with family, you will find a space that suits your needs. All
 				rooms are clean, well-maintained, and thoughtfully equipped to make your stay easy and enjoyable.</p>
 			<div class="rooms__cards">
 				<div class="rooms__item">
 					<img src="./images/rooms/room-1.webp" alt="room" class="rooms__image">
-					<h3 class="rooms__name">Standart Room</h3>
-					<p class="rooms__description">A cozy and practical choice for travelers who value comfort and simplicity.
+					<h3 class="rooms__name" data-i18n="rooms.standart__title">Standart Room</h3>
+					<p class="rooms__description" data-i18n="rooms.standart__description">A cozy and practical choice for
+						travelers who value comfort and simplicity.
 						The room features a comfortable bed, air conditioning, free Wi-Fi, and a private bathroom. Perfect for short
 						stays and city exploration.</p>
 				</div>
 				<div class="rooms__item">
 					<img src="./images/rooms/room-2.webp" alt="room" class="rooms__image">
-					<h3 class="rooms__name">Deluxe Room</h3>
-					<p class="rooms__description">Spacious and bright, the Deluxe Room offers extra comfort for a more relaxing
+					<h3 class="rooms__name" data-i18n="rooms.deluxe__title">Deluxe Room</h3>
+					<p class="rooms__description" data-i18n="rooms.deluxe__description">Spacious and bright, the Deluxe Room
+						offers extra comfort for a more relaxing
 						experience.
 						Enjoy additional space, modern amenities, and a calm atmosphere — ideal for couples or guests planning a
 						longer stay.</p>
 				</div>
 				<div class="rooms__item">
 					<img src="./images/rooms/room-3.webp" alt="room" class="rooms__image">
-					<h3 class="rooms__name">Family Room</h3>
-					<p class="rooms__description">Designed with families and small groups in mind, this room provides plenty of
+					<h3 class="rooms__name" data-i18n="rooms.family__title">Family Room</h3>
+					<p class="rooms__description" data-i18n="rooms.family__description">Designed with families and small groups in
+						mind, this room provides plenty of
 						space and convenience.
 						With multiple beds and a comfortable layout, it is a great option for those traveling together and looking
 						for a home-like stay.</p>
@@ -137,91 +146,98 @@
 		</section>
 		<section class="booking" id="contact">
 			<div class="booking__container">
-				<h2 class="booking__title">Check room availability</h2>
-				<p class="booking__subtitle">We usually reply within a few hours via WhatsApp or email</p>
+				<h2 class="booking__title" data-i18n="booking.title">Check room availability</h2>
+				<p class="booking__subtitle" data-i18n="booking.subtitle">We usually reply within a few hours via WhatsApp or
+					email</p>
 				<form action="https://formsubmit.co/antaress07@icloud.com" method="POST" class="booking__form" id="bookingForm">
 					<div class="booking__field">
-						<label for="name">Your Name</label>
-						<input type="text" id="name" name="name" required placeholder="John Johns">
+						<label for="name" data-i18n="booking.name">Your Name</label>
+						<input type="text" id="name" name="name" required placeholder="John Johns"
+							data-i18n="booking.namePlaceHolder" data-i18n-attr="placeholder">
 					</div>
 					<div class="booking__row">
 						<div class="booking__field">
-							<label for="checkin">Check-in Date</label>
+							<label for="checkin" data-i18n="booking.checkin">Check-in Date</label>
 							<input type="date" id="checkin" name="check-in" required>
 						</div>
 						<div class="booking__field">
-							<label for="checkout">Check-out Date</label>
+							<label for="checkout" data-i18n="booking.checkout">Check-out Date</label>
 							<input type="date" id="checkout" name="check-out" required>
 						</div>
 					</div>
 					<div class="booking__field guests">
-						<label for="guests">Guests</label>
+						<label for="guests" data-i18n="booking.guests">Guests</label>
 						<input type="number" id="guests" min="1" max="6" name="guests" required placeholder="0">
 					</div>
 					<div class="booking__field">
-						<label for="email">Email</label>
-						<input type="email" id="email" name="email" required placeholder="guest@email.com">
+						<label for="email" data-i18n="booking.email">Email</label>
+						<input type="email" id="email" name="email" required placeholder="guest@email.com"
+							data-i18n="booking.emailPlaceHolder" data-i18n-attr="placeholder">
 					</div>
 					<div class="booking__field">
-						<label for="contact-number">Contact Number</label>
+						<label for="contact-number" data-i18n="booking.contact">Contact Number</label>
 						<input type="tel" id="contact-number" name="contact-number" required placeholder="+01 (234) 567 89-01">
 					</div>
 					<div class="booking__field">
-						<label for="message">Message (optional)</label>
-						<textarea name="message" id="message" rows="4" placeholder="Any special requests?"></textarea>
+						<label for="message" data-i18n="booking.message">Message (optional)</label>
+						<textarea name="message" id="message" rows="4" placeholder="Any special requests?"
+							data-i18n="booking.messagePlaceHolder" data-i18n-attr="placeholder"></textarea>
 					</div>
-					<button class="booking__submit btn" type="submit">Send booking request</button>
+					<button class="booking__submit btn" type="submit" data-i18n="booking.btn">Send booking request</button>
 				</form>
 				<div class="booking__message">
 					<div class="booking__error is-hidden">
-						<h3 class="message__title">Something went wrong.</h3>
+						<h3 class="message__title" data-i18n="booking.error">Something went wrong.</h3>
 						<p class="message__text"></p>
 					</div>
 					<div class="booking__success is-hidden">
-						<h3 class="message__title">Request sent successfully</h3>
-						<p class="message__text">Thank you for your booking request.<br>We have received your message and will get
+						<h3 class="message__title" data-i18n="booking.success__title">Request sent successfully</h3>
+						<p class="message__text" data-i18n="booking.success__text">Thank you for your booking request.<br>We have
+							received your message and will get
 							back to you shortly to confirm availability.</p>
 					</div>
 				</div>
-				<p class="booking__subtitle">We usually reply within a few hours via WhatsApp or email</p>
+				<p class="booking__subtitle" data-i18n="booking.subtitle__2">We usually reply within a few hours via WhatsApp or
+					email</p>
 			</div>
 		</section>
 	</main>
 	<footer class="footer">
 		<div class="footer__block first">
-			<h3 class="footer__title">Your Hotel Name</h3>
-			<p class="footer__text">Cozy hotel near the beach in Nha Trang.<br>Direct booking with no commission.</p>
+			<h3 class="footer__title" data-i18n="footer.title">Your Hotel Name</h3>
+			<p class="footer__text" data-i18n="footer.text">Cozy hotel near the beach in Nha Trang.<br>Direct booking with no
+				commission.</p>
 			<a href="https://wa.me/+79953260711" class="footer__wa-btn btn">
 				<img src="./images/wa-logo.png" alt="" class="footer__wa-logo">
 				WhatsApp
 			</a>
 		</div>
 		<div class="footer__block footer__contact">
-			<h3 class="footer__title">Contact</h3>
+			<h3 class="footer__title" data-i18n="footer.title__contact">Contact</h3>
 			<p class="footer__text">
-				<strong>Address:</strong>
-				123 Beach Road,<br>Nha Trang, Vietnam
+				<strong data-i18n="footer.addressLabel">Address:</strong>
+				<span data-i18n="footer.addressValue">123 Beach Road,<br>Nha Trang, Vietnam</span>
 				<br>
-				<strong>Phone:</strong>
+				<strong data-i18n="footer.phoneLabel">Phone:</strong>
 				<a href="tel:+84900000000">+84 900 000 000</a>
 				<br>
-				<strong>Email:</strong>
-				<a href="mailto:info@hotel.com">info@hotel.com</a>
+				<strong data-i18n="footer.emailLabel">Email:</strong>
+				<a href="mailto:info@hotel.com" data-i18n="footer.emailValue">info@hotel.com</a>
 				<br>
-				<strong>Hours:</strong>
-				24/7
+				<strong data-i18n="footer.hoursLabel">Hours:</strong>
+				<span data-i18n="footer.hoursValue">24/7</span>
 			</p>
 		</div>
 		<div class="footer__block footer__map">
-			<h3 class="footer__title">Location</h3>
+			<h3 class="footer__title" data-i18n="footer.location">Location</h3>
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5907.1877105614485!2d109.19407910819758!3d12.240892455849647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170670440c4a309%3A0x4b6cddf8aa9ba969!2sApril%202nd%20Square!5e0!3m2!1sen!2sus!4v1766395125822!5m2!1sen!2sus"
 				allowfullscreen="" loading="lazy" title="location" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 
 		<div class="footer__bottom">
-			<p>This is a demo hotel website.</p>
-			<p>I adapt it individually for each hotel.</p>
+			<p data-i18n="footer.bottomFirstLine">This is a demo hotel website.</p>
+			<p data-i18n="footer.bottomSecondLine">I adapt it individually for each hotel.</p>
 		</div>
 	</footer>
 </body>

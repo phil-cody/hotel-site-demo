@@ -1,3 +1,5 @@
+import { getTranslation } from "./i18n.js";
+
 let form;
 let submitButton;
 let checkinInput;
@@ -40,9 +42,12 @@ export function initForm() {
 		// validate
 
 		const validateResult = validateDate(checkin, checkout);
+		let errorKey;
 
 		if (!validateResult.ok) {
-			showError(validateResult.message);
+			errorKey = "errors." + validateResult.errorCode;
+			const errorMessage = getTranslation(errorKey);
+			showError(errorMessage);
 			return;
 		}
 		// change submit button state
@@ -52,7 +57,8 @@ export function initForm() {
 				() => {
 					showSuccess();
 				},
-			(message) => {
+			(messageCode) => {
+				const message = getTranslation('errors.' + messageCode);
 				showError(message);
 				resetSubmitState(initialSubmitText);
 			}
@@ -69,21 +75,21 @@ function validateDate(checkin, checkout) {
 	if (!checkin || !checkout) {
 		return {
 			ok: false,
-			message: 'Fill in all the fields'
+			errorCode: 'EMPTY_FIELDS'
 		}
 	}
 
 	if (checkinDate < today) {
 		return {
 			ok: false,
-			message: 'The check-in date cannot be in the past'
+			errorCode: 'CHECKIN_IN_PAST'
 		}
 	}
 
 	if (checkoutDate <= checkinDate) {
 		return {
 			ok: false,
-			message: 'The check-out date should be after the check-in date'
+			errorCode: 'CHECKOUT_BEFORE_CHECKIN'
 		}
 	}
 
@@ -96,7 +102,7 @@ function setSubmittingState() {
 	if (submitButton) {
 		submitButton.disabled = true;
 		submitButton.classList.add('is-loading');
-		submitButton.innerHTML = 'The request is being sent';
+		submitButton.innerHTML = getTranslation('booking.sending');
 	}
 }
 
@@ -133,7 +139,7 @@ function simulateSend(onSuccess, onError) {
 		if (isSuccess) {
 			onSuccess();
 		} else {
-			onError('Failed to send request. Please try again');
+			onError('SEND_FAILED');
 		}
 	}, 2000);
 }
