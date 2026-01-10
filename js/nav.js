@@ -1,7 +1,61 @@
+// nav.js
+// variables
+// initNav():
+// – check if elements exist
+// – event listeners
+// –– open navigation menu
+// –– close navigation menu by clicking on link
+// –– close navigation menu by clicking on overlay
+// openNav()
+// closeNav()
+// toggleNav()
+
+// ===== VARIABLES =====
+
 let openMenuButton;
 let navMenu;
 let navLink;
 let overlay;
+
+// ===== INIT FUNCTION =====
+
+export function initNav() {
+
+	// ===== FIND ELEMENTS =====
+
+	openMenuButton = document.querySelector('.burger');
+	navMenu = document.querySelector('.header__nav');
+	navLink = document.querySelectorAll('.header__nav-link');
+	overlay = document.querySelector('.overlay');
+
+	// ===== CHECK IF ELEMENTS EXIST =====
+
+	if (!openMenuButton || !navMenu || !overlay) {
+		return;
+	}
+
+	// ===== EVENT LISTENERS =====
+
+	// ===== Open navigation menu by clicking on burger button =====
+
+	openMenuButton.addEventListener('click', () => {
+		toggleNav();
+	});
+
+	// ===== Close navigation menu by clicking on link =====
+
+	navLink.forEach((link) => {
+		link.addEventListener('click', () => {
+			closeNav();
+		});
+	});
+
+	// ===== Close navigation menu by clicking on overlay =====
+
+	overlay.addEventListener('click', function () {
+		closeNav();
+	});
+}
 
 // ===== FUNCTION FOR OPEN NAVIGATION MENU =====
 
@@ -27,44 +81,4 @@ function toggleNav() {
 	} else {
 		openNav();
 	}
-}
-
-// ===== INIT FUNCTION =====
-
-export function initNav() {
-
-	// ===== FIND ELEMENTS =====
-
-	openMenuButton = document.querySelector('.burger');
-	navMenu = document.querySelector('.header__nav');
-	navLink = document.querySelectorAll('.header__nav-link');
-	overlay = document.querySelector('.overlay');
-
-	// ===== CHECK IF ELEMENTS EXIST =====
-
-	if (!openMenuButton || !navMenu || !overlay) {
-		return;
-	}
-
-	// ===== EVENT LISTENERS =====
-
-	// ===== OPEN NAVIGATION MENU BY CLICKING ON BURGER BUTTON =====
-
-	openMenuButton.addEventListener('click', () => {
-		toggleNav();
-	});
-
-	// ===== CLOSE NAVIGATION MENU BY CLICKING ON LINK =====
-
-	navLink.forEach((link) => {
-		link.addEventListener('click', () => {
-			closeNav();
-		});
-	});
-
-	// ===== CLOSE NAVIGATION MENU BY CLICKING ON OVERLAY =====
-
-	overlay.addEventListener('click', function () {
-		closeNav();
-	});
 }

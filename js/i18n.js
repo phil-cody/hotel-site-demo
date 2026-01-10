@@ -1,3 +1,15 @@
+// i18n.js
+// variables
+// initI18n():
+// – variables
+// – functions
+// getTranslation(key)
+// setLanguage(lang)
+// getValueByKey(key)
+// getDictionary()
+
+// ===== VARIABLES =====
+
 const translations = {
 	en: {
 		header: {
@@ -146,21 +158,33 @@ const translations = {
 		}
 	}
 }
-
 let currentLang = 'en';
+
+// ===== INIT FUNCTION =====
 
 export function initI18n() {
 
+	// ===== FIND ELEMENTS =====
+
 	const elements = document.querySelectorAll('[data-i18n]');
 
+	// ===== TEXT SELECTION FOR ELEMENTS =====
+
 	elements.forEach((element) => {
+
+		// ===== Find key and text values =====
+
 		let attrName;
 		const key = element.dataset.i18n;
 		const text = getValueByKey(getDictionary(), key);
 
+		// ===== Check if text exists
+
 		if (text === undefined) {
 			return;
 		}
+
+		// ===== Checking where to put the data
 
 		if (element.dataset.i18nAttr) {
 			attrName = element.dataset.i18nAttr;
@@ -169,6 +193,20 @@ export function initI18n() {
 			element.innerHTML = text;
 		}
 	});
+}
+
+export function getTranslation(key) {
+	const value = getValueByKey(getDictionary(), key);
+
+	if (value === undefined) {
+		return key;
+	}
+
+	return value;
+}
+
+export function setLanguage(lang) {
+	currentLang = lang;
 }
 
 function getValueByKey(dictionary, key) {
@@ -185,20 +223,6 @@ function getValueByKey(dictionary, key) {
 	return result;
 }
 
-export function getTranslation(key) {
-	const value = getValueByKey(getDictionary(), key);
-
-	if (value === undefined) {
-		return key;
-	}
-
-	return value;
-}
-
 function getDictionary() {
 	return translations[currentLang];
-}
-
-export function setLanguage(lang) {
-	currentLang = lang;
 }
