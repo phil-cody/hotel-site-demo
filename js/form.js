@@ -53,12 +53,11 @@ export function initForm() {
 		// change submit button state
 		setSubmittingState();
 
-		simulateSend(
-				() => {
-					showSuccess();
-				},
-			(messageCode) => {
-				const message = getTranslation('errors.' + messageCode);
+		sendForm(form, () => {
+			showSuccess();
+		},
+			(errorCode) => {
+				const message = getTranslation('errors.' + errorCode);
 				showError(message);
 				resetSubmitState(initialSubmitText);
 			}
@@ -132,14 +131,21 @@ function showSuccess() {
 	}
 }
 
-function simulateSend(onSuccess, onError) {
-	setTimeout(function () {
-		const isSuccess = Math.random() > 0.5;
+function sendForm(form, onSuccess, onError) {
+	const formData = new FormData(form);
 
-		if (isSuccess) {
+	fetch(form.action, {
+		method: 'POST',
+		body: formData
+	})
+
+		.then((response) => {
+			if (!response.ok) {
+				throw new Error('SEND_FAILED');
+			}
 			onSuccess();
-		} else {
+		})
+		.catch(() => {
 			onError('SEND_FAILED');
-		}
-	}, 2000);
+		});
 }

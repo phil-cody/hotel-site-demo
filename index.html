@@ -149,7 +149,11 @@
 				<h2 class="booking__title" data-i18n="booking.title">Check room availability</h2>
 				<p class="booking__subtitle" data-i18n="booking.subtitle">We usually reply within a few hours via WhatsApp or
 					email</p>
-				<form action="https://formsubmit.co/antaress07@icloud.com" method="POST" class="booking__form" id="bookingForm">
+				<form action="https://api.web3forms.com/submit" method="POST" class="booking__form" id="bookingForm">
+					<input type="hidden" name="access_key" value="072f21ee-f572-475f-b582-f4d35b495d3e">
+					<input type="hidden" name="subject" value="New Booking Request - [Hotel Name]">
+					<input type="hidden" name="from_name" value="Hotel Booking System">
+					<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 					<div class="booking__field">
 						<label for="name" data-i18n="booking.name">Your Name</label>
 						<input type="text" id="name" name="name" required placeholder="John Johns"
