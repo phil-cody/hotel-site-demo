@@ -134,15 +134,28 @@ function showSuccess() {
 function sendForm(form, onSuccess, onError) {
 	const formData = new FormData(form);
 
-	fetch(form.action, {
-		method: 'POST',
-		body: formData
-	})
+	const name = formData.get('Name') || 'Guest';
+	formData.append('subject', `${name} sent a booking request`);
 
-		.then((response) => {
-			if (!response.ok) {
+	// Web3Forms принимает JSON
+	const dataObject = Object.fromEntries(formData);
+	const json = JSON.stringify(dataObject);
+
+	fetch('https://api.web3forms.com/submit', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			'Accept': 'application/json'
+		},
+		body: json
+	})
+		.then(async (response) => {
+			const result = await response.json();
+
+			if (!response.ok || result.success !== true) {
 				throw new Error('SEND_FAILED');
 			}
+
 			onSuccess();
 		})
 		.catch(() => {

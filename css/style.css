@@ -417,6 +417,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	justify-content: space-between;
 }
 
 .booking__field label {
