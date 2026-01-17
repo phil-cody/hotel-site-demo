@@ -403,10 +403,78 @@ header {
 	width: 100%;
 }
 
+/* ===== REVIEWS ===== */
+
+.reviews {
+	padding: 2rem;
+}
+
+.reviews-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.reviews-title {
+	font-size: 1.5rem;
+	color: #1f1f1f;
+}
+
+.reviews-list {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.review-card {
+	display: grid;
+	grid-template-columns: 75px 1fr;
+	justify-items: stretch;
+	align-items: stretch;
+	max-width: calc((100% - 6rem)/3);
+	text-align: center;
+	gap: 0.6rem;
+	border: 2px #1f1f1f solid;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.review-avatar {
+	width: 75px;
+	height: 75px;
+	grid-row: 1 / 3;
+	justify-self: start;
+}
+
+.review-rating {
+	grid-column: 2;
+	justify-self: start;
+	align-self: start;
+}
+
+.review-author {
+	color: #5f5f5f;
+	grid-column: 2;
+	justify-self: start;
+	align-self: end;
+	font-size: 0.9rem;
+}
+
+.review-text {
+	grid-column: 1 / 3;
+	color: #5f5f5f;
+}
+
+.reviews-link {
+	color: #5f5f5f;
+}
+
 /* ===== BOOKING FORM ===== */
 
 .booking {
 	padding: 2rem;
+	background-color: rgba(205, 154, 87, 0.3);
 }
 
 .booking__container {
@@ -795,6 +863,23 @@ header {
 		width: 100%;
 	}
 
+	/* ===== REVIEWS ===== */
+
+	.reviews-list {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.review-card {
+		max-width: 70%;
+		min-width: calc(100% - 4rem);
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.review-avatar {
+		justify-self: end;
+	}
+
 	/* ===== BOOKING FORM ===== */
 
 	.booking__container {
@@ -947,6 +1032,16 @@ header {
 
 	.gallery__grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+		/* ===== REVIEWS ===== */
+
+	.review-card {
+		grid-template-columns: 75px 1fr;
+	}
+
+	.review-avatar {
+		justify-self: start;
 	}
 
 	/* ===== BOOKING ===== */
