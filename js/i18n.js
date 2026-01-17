@@ -17,6 +17,7 @@ const translations = {
 			about: 'ABOUT US',
 			rooms: 'ROOMS',
 			gallery: 'GALLERY',
+			reviews: 'REVIEWS',
 			contact: 'CONTACT',
 			cta: 'Check availability'
 		},
@@ -41,6 +42,22 @@ const translations = {
 			deluxe__description: 'Spacious and bright, the Deluxe Room offers extra comfort for a more relaxing experience. Enjoy additional space, modern amenities, and a calm atmosphere — ideal for couples or guests planning a longer stay.',
 			family__title: 'Family Room',
 			family__description: 'Designed with families and small groups in mind, this room provides plenty of space and convenience. With multiple beds and a comfortable layout, it is a great option for those traveling together and looking for a home-like stay.'
+		},
+		reviews: {
+			title: 'What Our Guests Say',
+			first: {
+				author: '— Sarah M., Australia',
+				text: '"Great location, clean rooms, friendly staff. Would definitely stay again!"'
+			},
+			second: {
+				author: '— Michael T., USA',
+				text: '"Perfect for families. The staff went above and beyond to make our stay comfortable."'
+			},
+			third: {
+				author: '— Linh N., Vietnam',
+				text: '"Good value for money. Walking distance to the beach."'
+			},
+			link: 'View all reviews on Booking.com →'
 		},
 		booking: {
 			title: 'Check room availability',
@@ -90,6 +107,7 @@ const translations = {
 			about: 'GIỚI THIỆU',
 			rooms: 'PHÒNG',
 			gallery: 'PHÒNG TRƯNG BÀY',
+			reviews: 'ĐÁNH GIÁ',
 			contact: 'LIÊN HỆ',
 			cta: 'Kiểm tra phòng trống'
 		},
@@ -114,6 +132,22 @@ const translations = {
 			deluxe__description: 'Phòng Deluxe rộng rãi và sáng sủa mang đến sự thoải mái tối đa cho trải nghiệm thư giãn. Tận hưởng không gian rộng rãi hơn, tiện nghi hiện đại và bầu không khí yên tĩnh — lý tưởng cho các cặp đôi hoặc khách có kế hoạch lưu trú dài ngày.',
 			family__title: 'Phòng Gia đình',
 			family__description: 'Được thiết kế dành cho gia đình và các nhóm nhỏ, phòng này cung cấp không gian rộng rãi và tiện nghi. Với nhiều giường và cách bố trí thoải mái, đây là lựa chọn tuyệt vời cho những người đi du lịch cùng nhau và tìm kiếm một kỳ nghỉ ấm cúng như ở nhà.'
+		},
+		reviews: {
+			title: 'Khách hàng của chúng tôi nói gì',
+			first: {
+				author: '— Sarah M., Australia',
+				text: '"Vị trí tuyệt vời, phòng sạch sẽ, nhân viên thân thiện. Chắc chắn sẽ quay lại!"'
+			},
+			second: {
+				author: '— Michael T., USA',
+				text: '"Rất phù hợp cho gia đình. Nhân viên đã nỗ lực hết mình để đảm bảo kỳ nghỉ của chúng tôi thoải mái."'
+			},
+			third: {
+				author: '— Linh N., Vietnam',
+				text: '"Giá cả hợp lý. Có thể đi bộ đến bãi biển."'
+			},
+			link: 'Xem tất cả đánh giá trên Booking.com →'
 		},
 		booking: {
 			title: 'Kiểm tra tình trạng phòng trống',
