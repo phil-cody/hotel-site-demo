@@ -140,7 +140,7 @@ header {
 .btn {
 	width: 150px;
 	height: 60px;
-	background-color: #DD6C52;
+	background-color: #122E5E;
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
@@ -155,6 +155,16 @@ header {
 	gap: 1rem;
 }
 
+.header__social-btn {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.social-btn {
+	width: 75px;
+}
+
 .header__wa-btn {
 	background-color: #2cb742;
 	display: flex;
@@ -164,6 +174,19 @@ header {
 }
 
 .header__wa-logo {
+	width: 40px;
+	height: 40px;
+}
+
+.header__zalo-btn {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.header__zalo-logo {
 	width: 40px;
 	height: 40px;
 }
@@ -224,19 +247,8 @@ header {
 
 .hero__logo {
 	min-width: 250px;
+	width: 300px;
 	position: relative;
-}
-
-.hero__logo::before {
-	content: '';
-	width: 250px;
-	height: 250px;
-	background-color: rgba(255, 255, 255, 0.8);
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 0;
-	border-radius: 100%;
 }
 
 .hero__logo-image {
@@ -495,7 +507,7 @@ header {
 /* ===== FOOTER ===== */
 
 .footer {
-	background-color: #1f1f1f;
+	background-color: #122E5E;
 	color: #fff;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -563,6 +575,12 @@ header {
 	font-size: 0.8rem;
 }
 
+.footer__social-btn {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
 .footer__wa-btn {
 	background-color: #2cb742;
 	width: 250px;
@@ -573,6 +591,24 @@ header {
 }
 
 .footer__wa-logo {
+	width: 40px;
+	height: 40px;
+}
+
+.footer__zalo-btn {
+	background-color: #fff;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.footer .footer__zalo-btn {
+	color: #0080C7;
+}
+
+.footer__zalo-logo {
 	width: 40px;
 	height: 40px;
 }
@@ -613,6 +649,10 @@ header {
 
 	.burger {
 		display: flex;
+	}
+
+	.footer__social-btn {
+		flex-direction: column;
 	}
 }
 
@@ -663,6 +703,16 @@ header {
 		height: 24px;
 	}
 
+	.header__zalo-btn {
+		width: 40px;
+		height: 40px;
+	}
+
+	.header__zalo-logo {
+		width: 24px;
+		height: 24px;
+	}
+
 	.burger {
 		width: 50px;
 		height: 50px;
@@ -670,6 +720,11 @@ header {
 
 	.burger span {
 		height: 8px;
+	}
+
+	.logo__image {
+		width: 72px;
+		height: 72px;
 	}
 
 	/* ===== HERO ===== */
@@ -766,6 +821,7 @@ header {
 
 	.footer__block.footer__contact {
 		height: 100%;
+		justify-content: space-evenly;
 	}
 
 	.footer__map iframe {
@@ -784,6 +840,16 @@ header {
 	}
 
 	.footer__wa-btn {
+		gap: 0;
+		justify-content: space-evenly;
+	}
+
+	.footer__zalo-logo {
+		width: 24px;
+		height: 24px;
+	}
+
+	.footer__zalo-btn {
 		gap: 0;
 		justify-content: space-evenly;
 	}
@@ -813,9 +879,8 @@ header {
 		gap: 0.4rem;
 	}
 
-	.logo__image {
-		width: 72px;
-		height: 72px;
+	.header__social-btn {
+		gap: 0.4rem;
 	}
 
 	.burger {
@@ -933,5 +998,10 @@ header {
 
 	.footer__map iframe {
 		height: 220px;
+	}
+
+	.footer__social-btn {
+		gap: 0.4rem;
+		flex-direction: row;
 	}
 }
